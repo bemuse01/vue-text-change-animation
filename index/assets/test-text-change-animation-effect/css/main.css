@@ -1,0 +1,54 @@
+@font-face{
+    src: url('../font/RobotoMono-Regular.ttf');
+    font-family: RobotoMonoRegular;
+}
+@font-face{
+    src: url('../font/RobotoMono-Light.ttf');
+    font-family: RobotoMonoLight;
+}
+
+
+
+
+@keyframes blink-close{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.text-transition-enter-active{
+    transition: all 0.3s;
+}
+.text-transition-leave-active{
+    animation: blink-close 0.06s 3 forwards;
+    transition: all 0.3s;
+}
+.text-transition-enter{
+    opacity: 0;
+}
+.text-transition-leave-to{
+    opacity: 0;
+}
+
+
+
+
+body{
+    background: black;
+    overflow: hidden;
+    color: white;
+}
+div#text-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+span.texts{
+    font-size: 60px;
+    font-family: RobotoMonoLight;
+    margin-right: 10px;
+    transition: opacity 0.3s;
+}
+span.texts:last-child{
+    margin-right: 0;
+}

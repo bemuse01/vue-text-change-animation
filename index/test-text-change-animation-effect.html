@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="assets/vue.min.js"></script>
+        <script src="assets/test-text-change-animation-effect/js/param.js"></script>
+        <script src="assets/test-text-change-animation-effect/js/util.js"></script>
+        <script src="assets/test-text-change-animation-effect/js/main.method.js"></script>
+        <link href="assets/test-text-change-animation-effect/css/main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="wrap">
+            <transition name="text-transition">
+                <div id="text-wrap" v-show="show.text">
+                    <span
+                        class="texts"
+                        v-for="t in text"
+                        :key="t.id"
+                        :style="t.style"
+                    >{{t.display}}</span>
+                </div>
+            </transition>
+        </div>
+        <script src="assets/test-text-change-animation-effect/js/main.js"></script>
+    </body>
+</html>
